@@ -1,5 +1,4 @@
-from dataclasses import dataclass
-
+from esmace.utils import dataclass
 from esmace.metric import Score, Metric
 from esmace.sampler import Sampler
 from esmace.structure import Structure

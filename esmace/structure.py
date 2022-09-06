@@ -1,6 +1,6 @@
-from dataclasses import dataclass
-
 import numpy as np
+
+from esmace.utils import dataclass
 
 
 @dataclass(frozen=True, slots=True)

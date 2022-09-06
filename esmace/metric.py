@@ -1,10 +1,9 @@
-from dataclasses import dataclass
-
 import numpy as np
 
 from esmace.estimation_bounds import hoeffding_bounds
 from esmace.grouping_measure import GroupingMeasure
 from esmace.structure import Structure
+from esmace.utils import dataclass
 
 
 @dataclass(frozen=True, slots=True)

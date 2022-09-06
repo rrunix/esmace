@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from typing import List
 
 from tqdm.auto import tqdm
@@ -6,12 +5,12 @@ from tqdm.auto import tqdm
 from esmace.candidate import Explanation, update_metrics
 from esmace.discretizer import Discretizer
 from esmace.expand_strategy import ExpandStrategy
+from esmace.mab import mab_lub
 from esmace.metric import Metric, is_probably_higher, is_probably_lower
 from esmace.neighborhood import Neighborhood
-from esmace.mab import mab_lub
 from esmace.sampler import Sampler
 from esmace.structure import Structure
-from esmace.utils import check_is_fitted
+from esmace.utils import check_is_fitted, dataclass
 
 
 @dataclass(slots=True, frozen=True)
