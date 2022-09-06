@@ -12,7 +12,7 @@ from esmace.sampler import TabularSampler, CachingTabularSampler
 from esmace.expand_strategy import StepExpandStrategy
 from esmace.neighborhood import NoNeighborhood
 from esmace.metric import FidelityMetric, SizeMetric
-from esmace.grouping_measure import CounterfactualGroupingMeasure
+from esmace.grouping_measure import SimpleMatchingGroupingMeasure
 from esmace.ESExplainer import ESExplainer, Restriction
 
 discretizer = TabularDiscretizer(num_bins=10)
@@ -21,7 +21,7 @@ expand = StepExpandStrategy(max_step=1)
 
 instance = X[25]
 label = clf.predict(instance.reshape(1, -1))
-fidelity = FidelityMetric(CounterfactualGroupingMeasure(label), p=0.01)
+fidelity = FidelityMetric(SimpleMatchingGroupingMeasure(label), p=0.01)
 
 explainer = ESExplainer(sampler, discretizer, expand, initial_sampling_size=None)
 explainer.fit(X, y)

@@ -7,7 +7,7 @@ class GroupingMeasure:
         pass
 
 
-class CounterfactualGroupingMeasure(GroupingMeasure):
+class SimpleMatchingGroupingMeasure(GroupingMeasure):
 
     def __init__(self, counterfactual_class) -> None:
         super().__init__()
